@@ -1,5 +1,5 @@
 # Network utilities (radio process)
-type netmgrd, domain;
+type netmgrd, domain,coredomain;
 type netmgrd_exec, exec_type, file_type,system_file_type;
 
 # Uses network sockets.
