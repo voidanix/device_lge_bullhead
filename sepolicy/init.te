@@ -25,7 +25,7 @@ allow init sysfs_rfkill0:file { read open write getattr setattr };
 allow init sysfs_rfkill0:lnk_file rw_file_perms;
 
 allow init sysfs:file { setattr getattr };
-#allow init sysfs:file write;
+allow init sysfs:file { write };
 
 allow init sysfs_subsys1:dir { search read open };
 allow init sysfs_subsys1:file { read open write getattr setattr };
@@ -36,3 +36,6 @@ allow init sysfs_mmcblk0_queue:file rw_file_perms;
 # kgsl
 allow init debugfs_kgsl_proc:dir { search read open relabelfrom };
 allow init debugfs_kgsl_proc:file { read write getattr setattr };
+
+# Allow init to bind mount loader config for media swcodec
+allow init system_file:file mounton;
