@@ -1,4 +1,4 @@
-type atfwd,domain,coredomain,device_domain_deprecated;
+type atfwd,domain;
 type atfwd_exec, exec_type, file_type, system_file_type;
 
 # Started by init
@@ -18,6 +18,3 @@ allow atfwd atfwd_service:service_manager find;
 allow atfwd diag_device:chr_file rw_file_perms;
 
 set_prop(atfwd, radio_atfwd_prop)
-
-# this is denied
-#allow atfwd atfwd_service:service_manager find;
