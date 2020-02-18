@@ -565,8 +565,8 @@ PRODUCT_PACKAGES += \
 android.hardware.power@1.2-service.bullhead
 
 # Thermal HAL
-PRODUCT_PACKAGES += \
-    thermal.bullhead 
+# PRODUCT_PACKAGES += \
+#    thermal.bullhead 
 
 #GNSS HAL
 PRODUCT_PACKAGES += \
